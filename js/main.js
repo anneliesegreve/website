@@ -12,7 +12,7 @@ function documentReady(callback) {
 
 function loadMenu(file) {
     if (file == 'index.html') {
-        window.location.replace('http://127.0.0.1:5500/index.html');
+        window.location.replace('https://anneliesegreve.github.io/website/');
     } else {
         loadPage('main', file);
     }
