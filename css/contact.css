@@ -1,0 +1,14 @@
+.contact-text {
+    text-align: center;
+}
+
+#instagram-logo {
+    width: 10%;
+    min-width: 6em;
+    height: auto;
+    margin-top: 10em;
+}
+
+#mail-address {
+    cursor: pointer;
+}
