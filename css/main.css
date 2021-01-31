@@ -8,12 +8,17 @@
     --extra-extra-large: 1400px;
     /* fonts */
     --montserrat: 'Montserrat', sans-serif;
+    --michroma: 'Michroma', sans-serif;
 }
 
 /* Global Page Element Styles */
 
 .nav-item, .navbar-brand {
     cursor: pointer;
+}
+
+.navbar-brand {
+    font-family: var(--michroma);
 }
 
 body {
@@ -34,6 +39,7 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
+    font-size: 0.875rem;
 }
 
 /* General-Purpose Utility Classes */
