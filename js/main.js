@@ -1,4 +1,4 @@
-const PAGES = ['home', 'works', 'exhibitions', 'contact'];
+const PAGES = ['works', 'exhibitions', 'contact'];
 
 var capitalize = (string) => string.replace(/^\w/, (c) => c.toUpperCase());
 
