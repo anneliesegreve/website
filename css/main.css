@@ -21,6 +21,17 @@
     font-family: var(--michroma);
 }
 
+.navbar-toggler {
+    border-width: inherit;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 body {
     font-family: var(--montserrat);
 }
