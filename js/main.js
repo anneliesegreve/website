@@ -1,6 +1,16 @@
-const PAGES = ['home', 'exhibitions', 'contact'];
+const PAGES = ['home', 'works', 'exhibitions', 'contact'];
 
 var capitalize = (string) => string.replace(/^\w/, (c) => c.toUpperCase());
+
+function copyMailAddress() {
+    navigator.clipboard.writeText('greve.anneliese@outlook.de')
+    .then(() => {
+        alert('Copied mail address to clipboard!');
+    })
+    .catch(err => {
+        console.error(`Could not copy text to clipboard: ${err}`);
+    });
+}
 
 function documentReady(callback) {
     if (document.readyState != 'loading') {
@@ -12,7 +22,7 @@ function documentReady(callback) {
 
 function loadMenu(file) {
     if (file == 'index.html') {
-        window.location.replace('https://anneliesegreve.github.io/website/');
+        window.location.replace('http://127.0.0.1:5500/index.html');
     } else {
         loadPage('main', file);
     }
@@ -37,4 +47,4 @@ function loadPage(container, file) {
 }
 
 var copyright = document.getElementById("copyright"); 
-copyright.innerHTML = `Anneliese Greve &copy; ${new Date().getFullYear()}`;
+copyright.innerHTML = `Anneliese Greve &copy; ${new Date().getFullYear()}. All Rights reserved.`;
