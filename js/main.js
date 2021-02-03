@@ -1,16 +1,6 @@
-const PAGES = ['works', 'exhibitions', 'contact'];
+const PAGES = ['works', 'cv', 'contact'];
 
 var capitalize = (string) => string.replace(/^\w/, (c) => c.toUpperCase());
-
-function copyMailAddress() {
-    navigator.clipboard.writeText('greve.anneliese@outlook.de')
-    .then(() => {
-        alert('Copied mail address to clipboard!');
-    })
-    .catch(err => {
-        console.error(`Could not copy text to clipboard: ${err}`);
-    });
-}
 
 function documentReady(callback) {
     if (document.readyState != 'loading') {
@@ -37,7 +27,7 @@ function loadPage(container, file) {
         document.querySelector(container).innerHTML = body;
     });
     let id = file.split('/')[1].replace('.html', '');
-    document.title = capitalize(id);
+    document.title = id === 'cv' ? 'CV' : capitalize(id);
     
     PAGES.forEach(function(page) {
         document.getElementById(page).classList.remove('active');
