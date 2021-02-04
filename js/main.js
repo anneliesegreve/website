@@ -10,6 +10,30 @@ function documentReady(callback) {
     }
 }
 
+function injectFileToContainer(container, file) {
+    documentReady(function () {
+        fetch(file)
+            .then(function (response) {
+                return response.text();
+            })
+            .then(function (body) {
+                document.querySelector(container).innerHTML = body;
+            });
+    });
+}
+
+function loadPage(container, file) {
+    injectFileToContainer(container, file);
+    let id = file.split('/')[1].replace('.html', '');
+    document.title = id === 'cv' ? 'CV' : capitalize(id);
+
+    PAGES.forEach(function (page) {
+        document.getElementById(page).classList.remove('active');
+    });
+
+    document.getElementById(id).classList.add('active');
+}
+
 function loadMenu(file) {
     if (file == 'index.html') {
         window.location.replace('https://anneliesegreve.github.io/website/');
@@ -18,38 +42,12 @@ function loadMenu(file) {
     }
 }
 
-function loadPage(container, file) {
-    fetch(file)
-    .then(function(response) {
-        return response.text();
-    })
-    .then(function(body) {
-        document.querySelector(container).innerHTML = body;
-    });
-    let id = file.split('/')[1].replace('.html', '');
-    document.title = id === 'cv' ? 'CV' : capitalize(id);
-    
-    PAGES.forEach(function(page) {
-        document.getElementById(page).classList.remove('active');
-    });
-    
-    document.getElementById(id).classList.add('active');
-}
-
 function loadWork(element) {
     work = document.getElementById(element.id);
     file = `html/works/${work.id}.html`;
-
-    fetch(file)
-    .then(function(response) {
-        return response.text();
-    })
-    .then(function(body) {
-        document.querySelector('main').innerHTML = body;
-    });
-
+    injectFileToContainer('main', file);
     document.title = work.text;
 }
 
-var copyright = document.getElementById("copyright"); 
+var copyright = document.getElementById("copyright");
 copyright.innerHTML = `Anneliese Greve &copy; ${new Date().getFullYear()}. All Rights reserved.`;
