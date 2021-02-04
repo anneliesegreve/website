@@ -14,6 +14,7 @@
   <!-- custom stylesheets -->
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/works.css">
   <link rel="stylesheet" href="css/cv.css">
   <link rel="stylesheet" href="css/contact.css">
   <title>Anne @Home</title>
@@ -52,7 +53,15 @@
   </nav>
   <main class="mt-3">
     <div class="container">
-      <img src="img/A warm place/Web/A warm place_forest installation_web_cropped.jpg" class="img-fluid" alt="A Warm Place" loading="lazy" title="A Warm Place"/>
+      <a id="a-warm-place" onclick="loadWork(this)">
+        <!-- visible on small and medium only -->
+        <img class="img-fluid d-block d-md-none" alt="A Warm Place" loading="lazy" title="A Warm Place" src="img/a-warm-place/web/A warm place_forest installation_web_cropped2.jpg"/>
+        <!-- hide on medium and below -->
+        <img class="img-fluid d-none d-md-block" alt="A Warm Place" loading="lazy" title="A Warm Place" src="img/a-warm-place/web/A warm place_forest installation_web_cropped.jpg"/>
+      </a>
+      <div class="image-description">
+        A Warm Place, 2020, ceramic installation in the forrest
+      </div>
     </div>
   </main>
   <footer class="footer py-3 mt-auto">
