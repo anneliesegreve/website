@@ -2,6 +2,8 @@ const PAGES = ['works', 'cv', 'contact'];
 
 var capitalize = (string) => string.replace(/^\w/, (c) => c.toUpperCase());
 
+var getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
+
 function documentReady(callback) {
     if (document.readyState != 'loading') {
         callback();
@@ -36,7 +38,8 @@ function loadPage(container, file) {
 
 function loadMenu(file) {
     if (file == 'index.html') {
-        window.location.replace('https://anneliesegreve.github.io/website/');
+        let rickRoll = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=emb_title';
+        window.location.replace(getRandomInt(100) == 69 ? rickRoll : 'https://anneliesegreve.github.io/website/');
     } else {
         loadPage('main', file);
     }
