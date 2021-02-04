@@ -1,0 +1,14 @@
+#a-warm-place {
+    cursor: pointer;
+}
+
+.image-description {
+    text-align: end;
+}
+
+@media (max-width: 768px) {
+    .image-description {
+        text-align: center;
+    }
+}
+
