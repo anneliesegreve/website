@@ -36,5 +36,20 @@ function loadPage(container, file) {
     document.getElementById(id).classList.add('active');
 }
 
+function loadWork(element) {
+    work = document.getElementById(element.id);
+    file = `html/works/${work.id}.html`;
+
+    fetch(file)
+    .then(function(response) {
+        return response.text();
+    })
+    .then(function(body) {
+        document.querySelector('main').innerHTML = body;
+    });
+
+    document.title = work.text;
+}
+
 var copyright = document.getElementById("copyright"); 
 copyright.innerHTML = `Anneliese Greve &copy; ${new Date().getFullYear()}. All Rights reserved.`;
