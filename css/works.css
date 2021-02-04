@@ -1,0 +1,13 @@
+.thumbnail {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) { 
+    .thumbnail {
+        margin-top: 1em;
+    }
+}
+
+.row:nth-child(n+2) {
+    margin-top: 1em;
+}
