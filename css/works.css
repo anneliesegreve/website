@@ -2,12 +2,19 @@
     cursor: pointer;
 }
 
-@media (max-width: 768px) { 
-    .thumbnail {
-        margin-top: 1em;
-    }
+.thumbnail-title {
+    margin-top: 0.25em;
 }
 
 .row:nth-child(n+2) {
     margin-top: 1em;
+}
+
+@media (max-width: 768px) { 
+    .thumbnail {
+        margin-top: 1em;
+    }
+    .thumbnail-title {
+        text-align: center;
+    }
 }
