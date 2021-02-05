@@ -4,6 +4,8 @@ var capitalize = (string) => string.replace(/^\w/, (c) => c.toUpperCase());
 
 var getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
 
+var scrollToTop = function () { window.scrollTo({ top: 0, behavior: 'smooth' }); };
+
 function documentReady(callback) {
     if (document.readyState != 'loading') {
         callback();
@@ -12,7 +14,7 @@ function documentReady(callback) {
     }
 }
 
-function injectFileToContainer(container, file) {
+function inject(container, file) {
     documentReady(function () {
         fetch(file)
             .then(function (response) {
@@ -25,7 +27,7 @@ function injectFileToContainer(container, file) {
 }
 
 function loadPage(container, file) {
-    injectFileToContainer(container, file);
+    inject(container, file);
     let id = file.split('/')[1].replace('.html', '');
     document.title = id === 'cv' ? 'CV' : capitalize(id);
 
@@ -38,7 +40,7 @@ function loadPage(container, file) {
 
 function loadMenu(file) {
     if (file == 'index.html') {
-        let rickRoll = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=emb_title';
+        let rickRoll = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
         window.location.replace(getRandomInt(100) == 69 ? rickRoll : 'https://anneliesegreve.github.io/website/');
     } else {
         loadPage('main', file);
@@ -48,8 +50,8 @@ function loadMenu(file) {
 function loadWork(element) {
     work = document.getElementById(element.id);
     file = `html/works/${work.id}.html`;
-    injectFileToContainer('main', file);
-    document.title = work.text;
+    inject('main', file);
+    document.title = work.firstElementChild.title;
 }
 
 var copyright = document.getElementById("copyright");
