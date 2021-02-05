@@ -4,6 +4,7 @@
 
 .image-description {
     text-align: end;
+    margin-top: 0.25em;
 }
 
 @media (max-width: 768px) {
@@ -11,4 +12,3 @@
         text-align: center;
     }
 }
-
