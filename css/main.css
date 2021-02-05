@@ -48,14 +48,12 @@ body {
     font-family: var(--montserrat);
 }
 
-.hyperlink {
+#to-top {
+    width: 2%;
+    min-width: 1em;
+    height: auto;
+    float: right;
     cursor: pointer;
-    text-decoration: none;
-    color: #2a9d8f;
-}
-
-.hyperlink:hover {
-    color: #2a9d8f;
 }
 
 .footer {
@@ -68,4 +66,43 @@ body {
 .flex-center {
     display: flex;
     justify-content: center;
+}
+
+.small-text {
+    line-height: 1.4em;
+    font-size: .9em;
+    color: var(--grey-darken-4);
+}
+
+.hyperlink {
+    cursor: pointer;
+    text-decoration: none;
+    color: #2a9d8f;
+}
+
+.hyperlink:hover {
+    color: #2a9d8f;
+}
+
+/* +++ media queries +++ */
+
+@media (min-width: 768px) {
+    #to-top {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 768px) {
+    footer > .container {
+        text-align: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-item {
+        text-align: center;
+    }
+    .navbar-brand {
+        padding-left: 27px;
+    }
 }
