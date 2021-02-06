@@ -1,10 +1,11 @@
 .small-header {
-   margin-bottom: 1em;
+   margin-bottom: 0.5em;
+   font-size: 1em;
    color: rgba(0,0,0,0.5);
 }
 
 .small-text {
     line-height: 1.4em;
-    font-size: .9em;
+    font-size: 0.9em;
     color: var(--grey-darken-4);
 }
