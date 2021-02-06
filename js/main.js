@@ -1,10 +1,8 @@
-const PAGES = ['works', 'info', 'legal_notice'];
+const PAGES = ['works', 'info', 'legal_notice', 'admin'];
 
 var capitalize = (string) => string.replace(/^\w/, (c) => c.toUpperCase());
 
 var getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
-
-var scrollToTop = function () { window.scrollTo({ top: 0, behavior: 'smooth' }); };
 
 function documentReady(callback) {
     if (document.readyState != 'loading') {
