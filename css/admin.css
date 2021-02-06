@@ -1,0 +1,10 @@
+.contact-text {
+    text-align: center;
+}
+
+#github-logo {
+    width: 5%;
+    min-width: 4em;
+    height: auto;
+    margin-top: 10em;
+}
