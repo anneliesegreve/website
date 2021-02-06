@@ -1,5 +1,7 @@
-function copyMailAddress() {
-    navigator.clipboard.writeText('greve.anneliese@outlook.de')
+var scrollToTop = function () { window.scrollTo({ top: 0, behavior: 'smooth' }); };
+
+function copyMailAddress(element) {
+    navigator.clipboard.writeText(element.innerHTML.trim())
     .then(() => {
         alert('Copied mail address to clipboard!');
     })
