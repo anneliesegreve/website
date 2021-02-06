@@ -1,4 +1,4 @@
-const PAGES = ['works', 'info', 'contact'];
+const PAGES = ['works', 'info', 'legal_notice'];
 
 var capitalize = (string) => string.replace(/^\w/, (c) => c.toUpperCase());
 
@@ -29,7 +29,7 @@ function inject(container, file) {
 function loadPage(container, file) {
     inject(container, file);
     let id = file.split('/')[1].replace('.html', '');
-    document.title = `Anne &${capitalize(id)}`;
+    document.title = `Anne &${id == 'legal_notice' ? 'Legal Notice' : capitalize(id)}`;
 
     PAGES.forEach(function (page) {
         document.getElementById(page).classList.remove('active');
