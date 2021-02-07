@@ -5,7 +5,7 @@
 ### Description
 
 ```cli
-Website of Anneliese Greve. Born in 1990 in Fernando de la Mora, Paraguay. Student at the Berlin University of the Arts (UdK).
+Anneliese Greve is a multidisciplinary artist  working with ceramic, drawing and photography. She currently lives and works in Berlin.
 ```
 
 ### Keywords
