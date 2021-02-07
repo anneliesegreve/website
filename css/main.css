@@ -55,7 +55,13 @@ body {
 
 .footer {
     width: 100%;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
+}
+
+#legal_notice {
+    color: #212529;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 /* General-Purpose Utility Classes */
@@ -110,7 +116,7 @@ body {
         text-align: end;
     }
 
-    #instagram-desktop, #facebook-desktop {
+    #instagram-desktop, #facebook-desktop, .hide-below-medium {
         display: none !important;
     }
 }
@@ -120,7 +126,7 @@ body {
         visibility: hidden;
     }
 
-    .socials-mobile {
+    .socials-mobile, .hide-on-medium-and-above {
         display: none !important;
     }
 
