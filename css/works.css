@@ -18,3 +18,22 @@
         text-align: center;
     }
 }
+
+/* hover effect on desktop devices */
+@media (min-width: 1199.98px) {
+    .thumbnail > a > img {
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 1;
+        transition: all 1s ease;
+    }
+
+    .thumbnail > a > img:hover {
+        filter: grayscale(90%) brightness(90%);
+        transform: scale(0.99);
+        opacity: 0.8;
+    }
+    
+    .thumbnail-title {
+        display: none;
+    }
+}
