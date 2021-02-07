@@ -107,8 +107,8 @@ body {
 
 @media (max-width: 767px) {
     #instagram-mobile, #facebook-mobile {
-        width: 10%;
-        min-width: 1em;
+        width: 25px;
+        height: 25px;
         height: auto;
     }
 
@@ -131,8 +131,8 @@ body {
     }
 
     #instagram-desktop, #facebook-desktop {
-        width: 7.5%;
-        min-width: 1em;
+        width: 20px;
+        height: 20px;
         height: auto;
     }
 
@@ -141,7 +141,7 @@ body {
     }
 
     #instagram-desktop {
-        margin-right: 5% !important;
+        margin-right: 12px !important;
     }
 }
 
