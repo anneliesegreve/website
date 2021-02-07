@@ -106,12 +106,6 @@ body {
 /* +++ media queries +++ */
 
 @media (max-width: 767px) {
-    #instagram-mobile, #facebook-mobile {
-        width: 25px;
-        height: 25px;
-        height: auto;
-    }
-
     #instagram {
         text-align: end;
     }
@@ -128,12 +122,6 @@ body {
 
     .socials-mobile, .hide-on-medium-and-above {
         display: none !important;
-    }
-
-    #instagram-desktop, #facebook-desktop {
-        width: 20px;
-        height: 20px;
-        height: auto;
     }
 
     .img-offset > img {
