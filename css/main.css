@@ -99,14 +99,48 @@ body {
 
 /* +++ media queries +++ */
 
+@media (max-width: 767px) {
+    #instagram-mobile, #facebook-mobile {
+        width: 10%;
+        min-width: 1em;
+        height: auto;
+    }
+
+    #instagram {
+        text-align: end;
+    }
+
+    #instagram-desktop, #facebook-desktop {
+        display: none !important;
+    }
+}
+
 @media (min-width: 768px) {
     #to-top {
         visibility: hidden;
     }
+
+    .socials-mobile {
+        display: none !important;
+    }
+
+    #instagram-desktop, #facebook-desktop {
+        width: 7.5%;
+        min-width: 1em;
+        height: auto;
+    }
+
+    .img-offset > img {
+        width: 20px !important;
+    }
+
+    #instagram-desktop {
+        margin-right: 5% !important;
+    }
 }
 
 @media (max-width: 768px) {
-    footer>.container {
+    footer > .container {
         text-align: center;
     }
 }
