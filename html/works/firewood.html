@@ -1,6 +1,49 @@
 <div class="container">
-    <h1>Firewood</h1>
-    <a onclick="loadMenu('html/works.html')">
-        Go back to Works
-    </a>
+    <section id="works">
+        <!-- title and description -->
+        <div class="excerpt">
+            <h1 class="small-header">Firewood</h1>
+            <p class="small-text">
+                ongoing, ceramic branches
+            </p>
+        </div>
+        <!-- first image -->
+        <div class="row">
+            <div class="col-8">
+                <img class="img-fluid" loading="lazy" alt="Collecting Firewood" title="Collecting Firewood" src="/img/firewood/web/img1.webp" />
+            </div>
+            <div class="col">
+                collecting firewood
+            </div>
+        </div>
+        <!-- second image -->
+        <div class="row">
+            <div class="col-8">
+                <img class="img-fluid" loading="lazy" alt="Firewood 1" title="Firewood 1" src="/img/firewood/web/img2.webp" />
+            </div>
+            <div class="col">
+                firewood, pic. 1
+            </div>
+        </div>
+        <!-- third image -->
+        <div class="row">
+            <div class="col-8">
+                <img class="img-fluid" loading="lazy" alt="Firewood 2" title="Firewood 2" src="/img/firewood/web/img3.webp" />
+            </div>
+            <div class="col">
+                firewood, pic. 2
+            </div>
+        </div>
+        <!-- bottom navigation -->
+        <div class="row">
+            <div class="col small-text">
+                <a id="back-to-works" onclick="loadMenu('html/works.html')">
+                    Go back to Works
+                </a>
+            </div>
+            <div class="col">
+                <img id="to-top" class="img-fluid" alt="arrow up" src="img/arrow_up.svg" onclick="scrollToTop()" ontouchstart="javascript:scrollToTop()" />
+            </div>
+        </div>
+    </section>
 </div>

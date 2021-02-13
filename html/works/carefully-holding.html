@@ -1,6 +1,31 @@
 <div class="container">
-    <h1>Carefully Holding</h1>
-    <a onclick="loadMenu('html/works.html')">
-        Go back to Works
-    </a>
+    <section id="works">
+        <!-- title and description -->
+        <div class="excerpt">
+            <h1 class="small-header">Carefully Holding</h1>
+            <p class="small-text">
+                work in progress, glazed ceramic hand bones
+            </p>
+        </div>
+        <!-- first image -->
+        <div class="row">
+            <div class="col-8">
+                <img class="img-fluid" loading="lazy" alt="Carefully Holding" title="Carefully Holding" src="/img/carefully-holding/web/img2.webp" />
+            </div>
+            <div class="col">
+                carefully holding
+            </div>
+        </div>
+        <!-- bottom navigation -->
+        <div class="row">
+            <div class="col small-text">
+                <a id="back-to-works" onclick="loadMenu('html/works.html')">
+                    Go back to Works
+                </a>
+            </div>
+            <div class="col">
+                <img id="to-top" class="img-fluid" alt="arrow up" src="img/arrow_up.svg" onclick="scrollToTop()" ontouchstart="javascript:scrollToTop()" />
+            </div>
+        </div>
+    </section>
 </div>
