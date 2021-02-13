@@ -1,6 +1,49 @@
 <div class="container">
-    <h1>A Network of Streams</h1>
-    <a onclick="loadMenu('html/works.html')">
-        Go back to Works
-    </a>
+    <section id="works">
+        <!-- title and description -->
+        <div class="excerpt">
+            <h1 class="small-header">A Network of Streams</h1>
+            <p class="small-text">
+                81,5 x 35 x 48 cm, ceramic, clay, pigment, wood, metal
+            </p>
+        </div>
+        <!-- first image -->
+        <div class="row">
+            <div class="col-8">
+                <img class="img-fluid" loading="lazy" alt="A Network of Streams (Backside Detail)" title="A Network of Streams (Backside Detail)" src="img/a-network-of-streams/web/img1.webp" />
+            </div>
+            <div class="col">
+                a network of streams, detail view (backside)
+            </div>
+        </div>
+        <!-- second image -->
+        <div class="row">
+            <div class="col-8">
+                <img class="img-fluid" loading="lazy" alt="A Network of Streams (Backside)" title="A Network of Streams (Backside)" src="img/a-network-of-streams/web/img2.webp" />
+            </div>
+            <div class="col">
+                a network of streams, full view (backside)
+            </div>
+        </div>
+        <!-- third image -->
+        <div class="row">
+            <div class="col-8">
+                <img class="img-fluid" loading="lazy" alt="A Network of Streams (Front View)" title="A Network of Streams (Front View)" src="img/a-network-of-streams/web/img3.webp" />
+            </div>
+            <div class="col">
+                a network of streams, front side
+            </div>
+        </div>
+        <!-- bottom navigation -->
+        <div class="row">
+            <div class="col small-text">
+                <a id="back-to-works" onclick="loadMenu('html/works.html')">
+                    Go back to Works
+                </a>
+            </div>
+            <div class="col">
+                <img id="to-top" class="img-fluid" alt="arrow up" src="img/arrow_up.svg" onclick="scrollToTop()" ontouchstart="javascript:scrollToTop()" />
+            </div>
+        </div>
+    </section>
 </div>

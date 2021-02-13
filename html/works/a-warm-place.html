@@ -1,6 +1,58 @@
 <div class="container">
-    <h1>A Warm Place</h1>
-    <a onclick="loadMenu('html/works.html')">
-        Go back to Works
-    </a>
+    <section id="works">
+        <!-- title and description -->
+        <div class="excerpt">
+            <h1 class="small-header">A Warm Place</h1>
+            <p class="small-text">
+                ceramic installation, blue carbonless copy paper, led drawing tablets
+            </p>
+        </div>
+        <!-- first image -->
+        <div class="row">
+            <div class="col-8">
+                <img class="img-fluid" loading="lazy" alt="A Warm Place (Backside Forest Installation 1)" title="A Warm Place (Backside Forest Installation 1)" src="img/a-warm-place/web/img1.webp" />
+            </div>
+            <div class="col">
+                a warm place, forest installation, pic. 1
+            </div>
+        </div>
+        <!-- second image image -->
+        <div class="row">
+            <div class="col-8">
+                <img class="img-fluid" loading="lazy" alt="A Warm Place (Backside Forest Installation 2)" title="A Warm Place (Backside Forest Installation 2)" src="img/a-warm-place/web/img2.webp" />
+            </div>
+            <div class="col">
+                a warm place, forest installation, pic. 2
+            </div>
+        </div>
+        <!-- third image -->
+        <div class="row">
+            <div class="col-8">
+                <img class="img-fluid" loading="lazy" alt="A Warm Place (Big Frame)" title="A Warm Place (Big Frame)" src="img/a-warm-place/web/img5.webp" />
+            </div>
+            <div class="col">
+                a warm place, big frame
+            </div>
+        </div>
+        <!-- fourth image -->
+        <div class="row">
+            <div class="col-8">
+                <img class="img-fluid" loading="lazy" alt="A Warm Place (Small Frame)" title="A Warm Place (Small Frame)" src="img/a-warm-place/web/img6.webp" />
+            </div>
+            <div class="col">
+                a warm place, small frame
+            </div>
+        </div>
+        <!-- bottom navigation -->
+        <div class="row">
+            <div class="col small-text">
+                <a id="back-to-works" onclick="loadMenu('html/works.html')">
+                    Go back to Works
+                </a>
+            </div>
+            <div class="col">
+                <img id="to-top" class="img-fluid" alt="arrow up" src="img/arrow_up.svg" onclick="scrollToTop()" ontouchstart="javascript:scrollToTop()" />
+            </div>
+        </div>
+    </section>
 </div>
