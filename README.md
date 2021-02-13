@@ -19,6 +19,19 @@ bildende, kunst, künstler, udk, deutschland, keramik, skulptur, zeitgemäß
 
 ## Compressing Images
 
+### Next-Gen Image Format
+
+```cli
+# convert one image to webp
+magick convert image.jpg image.webp
+```
+
+```cli
+# convert all images to webp, and remove all jpg files
+magick mogrify -format webp *.*
+Get-ChildItem *.jpg | foreach { Remove-Item $_.FullName }
+```
+
 ### Thumbnails
 
 ```cli
