@@ -58,7 +58,11 @@ body {
     font-size: 0.8rem;
 }
 
-#legal_notice {
+#legal_notice:after {
+    content: '|';
+}
+
+#legal_notice, #admin {
     color: #212529;
     cursor: pointer;
     text-decoration: none;
@@ -136,14 +140,5 @@ body {
 @media (max-width: 768px) {
     footer > .container {
         text-align: center;
-    }
-}
-
-@media (max-width: 992px) {
-    .nav-item {
-        text-align: center;
-    }
-    .navbar-brand {
-        padding-left: 27px;
     }
 }
