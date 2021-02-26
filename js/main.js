@@ -20,6 +20,7 @@ function inject(container, file) {
             })
             .then(function (body) {
                 document.querySelector(container).innerHTML = body;
+                refreshFsLightbox();
             });
     });
 }
