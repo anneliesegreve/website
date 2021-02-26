@@ -22,7 +22,9 @@ bildende, kunst, künstler, udk, deutschland, keramik, skulptur, zeitgemäß
 ### Next-Gen Image Format
 
 ```cli
-# convert one image to webp
+# compress image
+magick img1.jpg -strip -interlace Plane -gaussian-blur 0.05 -quality 85% img1.jpg
+# convert to webp
 magick convert image.jpg image.webp
 ```
 
@@ -35,5 +37,5 @@ Get-ChildItem *.jpg | foreach { Remove-Item $_.FullName }
 ### Thumbnails
 
 ```cli
-magick image_in.jpg -strip -interlace Plane -gaussian-blur 0.05 -quality 25% thumbnail.jpg
+magick image_in.jpg -strip -interlace Plane -gaussian-blur 0.05 -quality 15% thumbnail.jpg
 ```
