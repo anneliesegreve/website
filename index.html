@@ -67,14 +67,22 @@
       <a id="a-warm-place" onclick="loadWork(this)">
         <!-- visible on small and medium only -->
         <div class="d-block d-md-none">
-          <img class="img-fluid" alt="A Warm Place" loading="lazy" title="A Warm Place" src="img/pick-and-shovel/web/img2.webp"/>
+          <picture>
+            <source srcset="img/pick-and-shovel/web/img2.webp" type="image/webp" />
+            <source srcset="img/pick-and-shovel/web/img2.jpg" type="image/jpeg" />
+            <img class="img-fluid" loading="lazy" alt="Pick and Shovel" title="Pick and Shovel" src="img/pick-and-shovel/web/img2.jpg" />
+          </picture>
           <div class="image-description small-text">
             pick and shovel, 2019, ceramic and analogue photography
           </div>
         </div>
         <!-- visible on large work stations -->
         <div class="d-none d-md-block">
-          <img class="img-fluid" alt="A Warm Place" loading="lazy" title="A Warm Place" src="img/a-warm-place/web/img2.webp"/>
+          <picture>
+            <source srcset="img/a-warm-place/web/img2.webp" type="image/webp" />
+            <source srcset="img/a-warm-place/web/img2.jpg" type="image/jpeg" />
+            <img class="img-fluid" loading="lazy" alt="A Warm Place" title="A Warm Place" src="img/a-warm-place/web/img2.jpg" />
+          </picture>
           <div class="image-description small-text">
             a warm place, 2020, ceramic installation in the forest
           </div>
