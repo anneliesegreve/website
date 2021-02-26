@@ -25,7 +25,7 @@ bildende, kunst, künstler, udk, deutschland, keramik, skulptur, zeitgemäß
 # compress image
 magick img1.jpg -strip -interlace Plane -gaussian-blur 0.05 -quality 85% img1.jpg
 # convert to webp
-magick convert image.jpg image.webp
+magick mogrify -format webp img1.jpg
 ```
 
 ```cli
