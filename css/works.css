@@ -21,11 +21,11 @@
 
 /* hover effect on desktop devices */
 @media (min-width: 1199.98px) {
-    .thumbnail > a > img {
+    .thumbnail > a > picture {
         transition: all 1s ease;
     }
 
-    .thumbnail > a > img:hover {
+    .thumbnail > a > picture:hover {
         filter: brightness(100%);
         transform: scale(0.99);
         opacity: 0.8;
@@ -40,10 +40,4 @@
 
 #back-to-works {
     cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .excerpt {
-        text-align: center;
-    }
 }
