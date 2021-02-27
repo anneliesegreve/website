@@ -12,6 +12,16 @@ function documentReady(callback) {
     }
 }
 
+function CheckWEBPSupport() {
+    var element = document.createElement('canvas');
+
+    if (!!(element.getContext && element.getContext('2d'))) {
+        return element.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+    }
+
+    return false;
+}
+
 function inject(container, file) {
     documentReady(function () {
         fetch(file)
@@ -53,5 +63,10 @@ function loadWork(element) {
     document.title = work.firstElementChild.title;
 }
 
-var copyright = document.getElementById("copyright");
-copyright.innerHTML = `Anneliese Greve &copy; ${new Date().getFullYear()}. All Rights reserved.`;
+// main event loop
+documentReady(function() {
+    var IsWEBPCompatible = CheckWEBPSupport();    
+
+    var copyright = document.getElementById("copyright");
+    copyright.innerHTML = `Anneliese Greve &copy; ${new Date().getFullYear()}. All Rights reserved.`;
+});
