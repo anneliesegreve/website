@@ -12,7 +12,7 @@ function documentReady(callback) {
     }
 }
 
-function CheckWEBPSupport() {
+function BrowserSupportsWEBP() {
     var element = document.createElement('canvas');
 
     if (!!(element.getContext && element.getContext('2d'))) {
@@ -65,8 +65,8 @@ function loadWork(element) {
 
 // main event loop
 documentReady(function() {
-    var IsWEBPCompatible = CheckWEBPSupport();    
-
+    var isWEBPCompatible = BrowserSupportsWEBP();    
+    
     var copyright = document.getElementById("copyright");
     copyright.innerHTML = `Anneliese Greve &copy; ${new Date().getFullYear()}. All Rights reserved.`;
 });
