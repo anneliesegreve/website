@@ -113,7 +113,7 @@ body {
         text-align: end;
     }
 
-    #instagram-desktop, #facebook-desktop, .hide-below-medium {
+    #mail-desktop, #instagram-desktop, #facebook-desktop, .hide-below-medium {
         display: none !important;
     }
 }
@@ -131,7 +131,7 @@ body {
         width: 20px !important;
     }
 
-    #instagram-desktop {
+    #mail-desktop, #instagram-desktop {
         margin-right: 12px !important;
     }
 }
