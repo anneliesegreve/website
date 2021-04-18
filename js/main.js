@@ -60,7 +60,7 @@ function loadWork(element) {
     work = document.getElementById(element.id);
     file = `html/works/${work.id}.html`;
     inject('main', file);
-    document.title = work.firstElementChild.title;
+    document.title = `Anneliese Greve | ${work.getAttribute('data-title')}`;
 }
 
 // main event loop
