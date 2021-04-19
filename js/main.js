@@ -1,7 +1,3 @@
-const PAGES = ['works', 'about', 'legal_notice'];
-
-var capitalize = (string) => string.replace(/^\w/, (c) => c.toUpperCase());
-
 var getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
 
 function documentReady(callback) {
@@ -37,14 +33,14 @@ function inject(container, file) {
 
 function loadPage(container, file) {
     inject(container, file);
-    let id = file.split('/')[1].replace('.html', '');
-    document.title = `Anneliese Greve | ${id == 'legal_notice' ? 'Legal Notice' : capitalize(id)}`;
+    let element = document.getElementById(file.split('/')[1].replace('.html', ''));
+    document.title = `Anneliese Greve | ${element.getAttribute('data-title')}`;
 
-    PAGES.forEach(function (page) {
+    ['works', 'about'].forEach(function (page) {
         document.getElementById(page).classList.remove('active');
     });
 
-    document.getElementById(id).classList.add('active');
+    element.classList.add('active');
 }
 
 function loadMenu(file) {
