@@ -45,3 +45,9 @@
 .excerpt > .small-text {
     color: rgba(0, 0, 0, 0.5);
 }
+
+@media (max-width: 768px) { 
+    #works > div:nth-child(2) > div.col-12.col-md-4.order-1.order-md-2 {
+        margin-bottom: 24px;
+    }
+}
