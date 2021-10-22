@@ -78,15 +78,21 @@
         </div>
       </a>
       <!-- visible on large work stations -->
-      <a id="a-warm-place" data-title="A Warm Place" onclick="loadWork(this)" style="cursor: pointer;">
+      <a id="final-exam" style="cursor: pointer;">
         <div class="d-none d-md-block">
+          <!--
+            Note: 
+            1. Browsers supporting WebP will display the "cover.webp" <source> element
+            2. Older versions of browsers not supporting WebP will fallback to the "cover.jpg" <source> element
+            3. Browsers not supporting the <picture> tag (Internet Explorer) will fallback to the <img> tag
+          -->
           <picture>
-            <source srcset="img/a-warm-place/web/img4.webp" type="image/webp" />
-            <source srcset="img/a-warm-place/web/img4.jpg" type="image/jpeg" />
-            <img class="img-fluid" loading="lazy" alt="A Warm Place" title="A Warm Place" src="img/a-warm-place/web/img4.jpg" />
+            <source srcset="img/final-exam/web/cover.webp" type="image/webp">
+            <source srcset="img/final-exam/web/cover.jpg" type="image/jpeg"> 
+            <img src="img/final-exam/web/cover.jpg" loading="lazy" alt="Final Exam" title="Final Exam" class="img-fluid">
           </picture>
           <div class="image-description small-text">
-            a warm place, 2020, ceramic installation in the forest
+            Final Exam, Absolvent, 2021
           </div>
         </div>
       </a>
