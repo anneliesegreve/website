@@ -1,4 +1,4 @@
-var scrollToTop = function () { window.scrollTo({ top: 0, behavior: 'smooth' }); };
+const scrollToTop =  () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
 function copyMailAddress(element) {
     navigator.clipboard.writeText(element.innerHTML.trim())
