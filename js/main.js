@@ -21,9 +21,8 @@ function inject(container, file) {
   });
 }
 
-function loadPage(container, file) {
-  inject(container, file);
-  let element = document.getElementById(file.split("/")[1].replace(".html", ""));
+function loadPage(event) {
+  let element = document.getElementById(event.currentTarget.id);
   document.title = `Anneliese Greve | ${element.getAttribute("data-title")}`;
 
   ["works", "about"].forEach(function (page) {
@@ -31,18 +30,7 @@ function loadPage(container, file) {
   });
 
   element.classList.add("active");
-}
-
-function loadMenu(file) {
-  if (file === "index.html") {
-    window.location.replace(
-      getRandomInt(100) === 69
-        ? "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        : "https://anneliesegreve.github.io/website/"
-    );
-  } else {
-    loadPage("main", file);
-  }
+  inject("main", `html/${element.id}.html`);
 }
 
 function loadWork(element) {
@@ -51,8 +39,9 @@ function loadWork(element) {
   document.title = `Anneliese Greve | ${work.getAttribute("data-title")}`;
 }
 
-// main event loop
-documentReady(function () {
-  let copyright = document.getElementById("copyright");
-  copyright.innerHTML = `Anneliese Greve &copy; ${new Date().getFullYear()}. All Rights reserved.`;
-});
+function scrollToTop () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+}

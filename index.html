@@ -7,10 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="pragma" content="public">
   <meta http-equiv="cache-control" content="public">
+  <title>Anneliese Greve | Home</title>
   <meta name="robots" content="index, follow">
   <meta name="author" content="Stefan Greve">
   <meta name="name" content="Anneliese Greve">
-  <meta name="copyright" content="&copy; 2021 Anneliese Greve">
+  <meta name="copyright" content="&copy; 2023 Anneliese Greve">
   <meta name="description" content="Anneliese Greve is a multidisciplinary artist  working with ceramic, drawing and photography. She currently lives and works in Berlin.">
   <meta name="keywords" content="anneliese greve, fine, art, artist, udk, germany, berlin, ceramic, installation, sculpture, contemporary, bildende, kunst, künstler, udk, deutschland, keramik, skulptur, zeitgemäß">
   <!-- favicons -->
@@ -33,13 +34,16 @@
   <link rel="stylesheet" href="css/info.css">
   <link rel="stylesheet" href="css/legal_notice.css">
   <link rel="stylesheet" href="css/admin.css">
-  <title>Anneliese Greve | Home</title>
+  <!-- javascript -->
+  <script src="js/main.js"></script>
+  <script defer src="js/fslightbox.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid container">
-      <a id="home" data-title="Home" class="navbar-brand" onclick="loadMenu('index.html')">
+      <a id="home" data-title="Home" class="navbar-brand" onclick="loadPage(event)">
         Anneliese Greve
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -49,12 +53,12 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a id="works" data-title="Works" class="nav-link" aria-current="page" onclick="loadMenu('html/works.html')">
+            <a id="works" data-title="Works" class="nav-link" aria-current="page" onclick="loadPage(event)">
               Works
             </a>
           </li>
           <li class="nav-item">
-            <a id="about" data-title="About" class="nav-link" onclick="loadMenu('html/about.html')">
+            <a id="about" data-title="About" class="nav-link" onclick="loadPage(event)">
               About
             </a>
           </li>
@@ -63,34 +67,9 @@
     </div>
   </nav>
   <main class="mt-3 mb-3">
-    <div class="container">
-      <!-- visible on small and medium only -->
-      <a id="pick-and-shovel" data-title="Pick and Shovel" onclick="loadWork(this)" style="cursor: pointer;">
-        <div class="d-block d-md-none">
-          <picture>
-            <source srcset="img/pick-and-shovel/web/img2.webp" type="image/webp" />
-            <source srcset="img/pick-and-shovel/web/img2.jpg" type="image/jpeg" />
-            <img class="img-fluid" loading="lazy" alt="Pick and Shovel" title="Pick and Shovel" src="img/pick-and-shovel/web/img2.jpg" />
-          </picture>
-          <div class="image-description small-text">
-            pick and shovel, 2019, ceramic and analogue photography
-          </div>
-        </div>
-      </a>
-      <!-- visible on large work stations -->
-      <a id="pages-from-a-research-diary" data-title="Pages from a Research Diary" onclick="loadWork(this)" style="cursor: pointer;">
-        <div class="d-none d-md-block">
-          <picture>
-            <source srcset="img/pages-from-a-research-diary/web/img1.webp" type="image/webp" />
-            <source srcset="img/pages-from-a-research-diary/web/img1.jpg" type="image/jpeg" />
-            <img class="img-fluid" loading="lazy" alt="Pages from a Research Diary" title="Pages from a Research Diary" src="img/pages-from-a-research-diary/web/img1.jpg" />
-          </picture>
-          <div class="image-description small-text">
-            Absolventenausstellung, July 2021
-          </div>
-        </div>
-      </a>
-    </div>
+    <script type="text/javascript">
+      const app = documentReady(() => inject("main", "html/home.html"));
+    </script>
   </main>
   <footer class="footer py-3 mt-auto">
     <div class="container">
@@ -99,25 +78,25 @@
         <a class="p-2" style="text-align: end;" title="Anne's Mail Address" href="mailto:greve.anneliese@outlook.de">
           <img id="mail-mobile" src="img/mail.svg" width="25px" height="25px" alt="Mail Logo">
         </a>
-        <a class="p-2" style="text-align: end;" title="Anne on Instagram" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/anneliese_greve/">
+        <a class="p-2" style="text-align: end;" title="Anne on Instagram" target="_blank" href="https://www.instagram.com/anneliese_greve/">
           <img id="instagram-mobile" src="img/instagram.svg" width="25px" height="25px" alt="Instagram Logo">
         </a>
-        <a class="p-2" style="text-align: start;" title="Anne on Facebook" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Anneliese.Greve">
+        <a class="p-2" style="text-align: start;" title="Anne on Facebook" target="_blank" href="https://www.facebook.com/Anneliese.Greve">
           <img id="instagram-mobile" src="img/facebook.svg" width="25px" height="25px" alt="Facebook Logo">
         </a>
       </div>
       <div class="d-flex">
         <div class="flex-grow-1">
           <span id="copyright" class="text-muted hide-below-medium">
-            Anneliese Greve &copy 2021. All Rights reserved.
+            Anneliese Greve &copy 2023. All Rights reserved.
           </span>
           <div id="copyright" class="text-muted hide-on-medium-and-above">
-            Anneliese Greve &copy 2021. All Rights reserved.
+            Anneliese Greve &copy 2023. All Rights reserved.
           </div>
-          <a id="legal_notice" onclick="loadMenu('html/legal_notice.html')">
+          <a id="legal_notice" onclick="loadPage(event)">
             (Legal Notice
           </a>
-          <a id="admin" onclick="loadMenu('html/admin.html')">
+          <a id="admin" onclick="loadPage(event)">
             Site Admin)
           </a>
         </div>
@@ -134,11 +113,6 @@
       </div>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-  <script src="js/main.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/events.js"></script>
-  <script src="js/fslightbox.js"></script>
 </body>
 
 </html>
