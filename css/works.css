@@ -2,20 +2,13 @@
     cursor: pointer;
 }
 
-.thumbnail-title {
-    margin-top: 0.25em;
-}
-
 .row:nth-child(n+2) {
     margin-top: 24px;
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
     .thumbnail {
         margin-top: 1em;
-    }
-    .thumbnail-title {
-        text-align: center;
     }
 }
 
@@ -30,10 +23,6 @@
         transform: scale(0.99);
         opacity: 0.8;
     }
-    
-    .thumbnail-title {
-        display: none;
-    }
 }
 
 /* individual work styles */
@@ -46,7 +35,7 @@
     color: rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
     #works > div:nth-child(2) > div.col-12.col-md-4.order-1.order-md-2 {
         margin-bottom: 24px;
     }
